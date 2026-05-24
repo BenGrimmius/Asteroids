@@ -1,10 +1,10 @@
 import pygame
 from circleshape import CircleShape
-from constants import LINE_WIDTH, PLAYER_SHOT_SPEED
+from constants import LINE_WIDTH
 
 class Shot(CircleShape):
-    def __init__(self, x, y, radius):
-        super().__init__(x, y, radius)
+    def __init__(self, x, y):
+        super().__init__(x, y)
 
     def draw(self, screen: pygame.Surface) -> None:
         pygame.draw.circle(screen, "white", self.position, self.radius, LINE_WIDTH )
