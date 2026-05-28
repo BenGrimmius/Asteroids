@@ -23,4 +23,8 @@ class Asteroid(CircleShape):
         first_asteroid_velocity = self.velocity.rotate(random_angle)
         second_asteroid_velocity = self.velocity.rotate(-random_angle)
         new_radius = self.radius - ASTEROID_MIN_RADIUS
+        first_asteroid = Asteroid(self.position.x, self.position.y, new_radius)
+        second_asteroid = Asteroid(self.position.x, self.position.y, new_radius)
+        first_asteroid.velocity = first_asteroid_velocity * 1.2
+        second_asteroid.velocity = second_asteroid_velocity * 1.2
 
